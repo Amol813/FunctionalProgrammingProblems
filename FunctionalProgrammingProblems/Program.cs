@@ -9,7 +9,7 @@ internal class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Exit");
+            Console.WriteLine("Choose an option to execute\n1.Flip coin\n2.Leap Year\n3.Power Of Two\n4.Harmonic Number\n5.Factors\n6.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -38,6 +38,12 @@ internal class Program
                     harmonicNumber.PrintHarmonicNumber(hn);
                     break;
                 case 5:
+                    Factors factors = new Factors();
+                    Console.WriteLine("Enter a number: ");
+                    int number = Convert.ToInt32(Console.ReadLine());
+                    factors.PrimeFactors(number);
+                    break;
+                case 6:
                     flag = false;
                     break;
             }
